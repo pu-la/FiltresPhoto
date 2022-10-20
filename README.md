@@ -23,6 +23,7 @@ Rienk:
  - Code optimise
  - Interface
 
-Recources: https://kxs.fr/cours/projets/filtres-photo
-https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop
-https://www.simplilearn.com/how-to-use-github-desktop-tutorial-article
+Recources: 
+ - https://kxs.fr/cours/projets/filtres-photo
+ - https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop
+ - https://www.simplilearn.com/how-to-use-github-desktop-tutorial-article
