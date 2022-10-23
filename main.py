@@ -26,11 +26,11 @@ def filtre(in_image, coeff_liste):
     return image
 def filtre_r(in_image):
     '''Filtre Rouge, passe une image'''
-    filtre(in_image, [1,0,0])
+    return filtre(in_image, [1,0,0])
 def filtre_g(in_image):
     '''Filtre Vert, passe une image'''
-    filtre(in_image, [0,1,0])
+    return filtre(in_image, [0,1,0])
 def filtre_b(in_image):
     '''Filtre Bleu, passe une image'''
-    filtre(in_image, [0,0,1])
+    return filtre(in_image, [0,0,1])
 #PROGRAMME
