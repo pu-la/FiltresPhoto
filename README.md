@@ -11,8 +11,8 @@ Tawana:
 - Gris
 	- [x] Code
 	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Propre
+	- [x] Optimise
 - Noir et blanc
 	- [ ] Code
 	- [ ] Commentaires
@@ -62,29 +62,29 @@ Rienk:
 	- [x] Code
 	- [x] Commentaires
 	- [x] Propre
-	- [ ] Optimise
+	- [x] Optimise
 - Filtre Vert
 	- [x] Code
 	- [x] Commentaires
 	- [x] Propre
-	- [ ] Optimise
+	- [x] Optimise
 - Filtre Bleu
 	- [x] Code
 	- [x] Commentaires
 	- [x] Propre
-	- [ ] Optimise
+	- [x] Optimise
 - Filtre pour tout les couleurs
 	- [x] Code
 	- [x] Commentaires
 	- [x] Propre
-	- [ ] Optimise
+	- [x] Optimise
 - Commentaires
 - Code Propre
 - Code optimise
 - Interface
-- Note: To-Do:
-    - [ ] Optimise filtre() and filtre_float() with image.load() and lists
-  
+
+
+
 
 Recources:
 
