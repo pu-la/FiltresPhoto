@@ -4,10 +4,10 @@
 Repartition de travail:
 Tawana:
 - Bleu et Vert
-	- [ ] Code
-	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 - Gris
 	- [x] Code
 	- [ ] Commentaires
