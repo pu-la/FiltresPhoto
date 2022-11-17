@@ -18,19 +18,23 @@ Tawana:
 	- [x] Commentaires
 	- [x] Propre
 	- [x] Optimise
-
+- Filtre Rouge
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
+- Filtre Vert
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
+- Filtre Bleu
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 Ubu:
 - Mirroir
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Pixel3
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Pixel10
 	- [x] Code
 	- [x] Commentaires
 	- [x] Propre
@@ -58,22 +62,18 @@ Owen:
   
 
 Rienk:
-- Filtre Rouge
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Filtre Vert
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Filtre Bleu
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
 - Filtre pour tout les couleurs
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
+
+- Pixel3
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
+- Pixel10
 	- [x] Code
 	- [x] Commentaires
 	- [x] Propre
