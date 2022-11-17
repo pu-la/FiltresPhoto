@@ -10,50 +10,50 @@ Tawana:
 	- [x] Optimise
 - Gris
 	- [x] Code
-	- [ ] Commentaires
+	- [x] Commentaires
 	- [x] Propre
 	- [x] Optimise
 - Noir et blanc
-	- [ ] Code
-	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 
 Ubu:
 - Mirroir
-	- [ ] Code
-	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 - Pixel3
-	- [ ] Code
-	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 - Pixel10
-	- [ ] Code
-	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 - Lum
-	- [ ] Code
-	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 
   
 
 Owen:
 - Color
-	- [ ] Code
-	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 - Color512
-	- [ ] Code
-	- [ ] Commentaires
-	- [ ] Propre
-	- [ ] Optimise
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
 
   
 
@@ -82,6 +82,7 @@ Rienk:
 - Code Propre
 - Code optimise
 - Interface
+	- [x] Code
 
 
 
