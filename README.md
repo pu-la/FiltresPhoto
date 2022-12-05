@@ -1,98 +1,25 @@
+# Manuel d'utiliation
 
-# Filtres Photo
+1. Demarrer le programme avec `>py main.py`
+2. Apres que le programme tourne, vous verrez un menu:
+```
+[O]uvrir
+[E]nregistrer
+[P]review
+[Q]uitter
+Filtres:
+ 1. Couleurs
+ 2. Couleurs (avancee)
+ 3. Gris
+ 4. Noir et blanc
+ 5. Mirroir
+ 6. Pixelation
+ 7. Luminosite
+ 8. Color
+ 9. Color512
+  ```
+  3. Les modifications de l'image(filtres) peuvent etre utilise avec les numeros entre 1 et 9
+  4. Les autres fonctions importantes sont indique entre les parentheses - pour ouvrir un fichier, utiliser [O]
 
-Repartition de travail:
-Tawana:
-- Bleu et Vert
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Gris
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Noir et blanc
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Filtre Rouge
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Filtre Vert
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Filtre Bleu
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-Ubu:
-- Mirroir
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Lum
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-
-  
-
-Owen:
-- Color
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Color512
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-
-  
-
-Rienk:
-- Filtre pour tout les couleurs
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-
-- Pixel3
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Pixel10
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Commentaires
-- Code Propre
-- Code optimise
-- Interface
-	- [x] Code
-
-
-
-
-Recources:
-
-- Projet: https://kxs.fr/cours/projets/filtres-photo
-
-- Github Desktop: https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop
-
-- Github Desktop: https://www.simplilearn.com/how-to-use-github-desktop-tutorial-article
-
-- PILLow: https://pillow.readthedocs.io/en/stable/reference/Image.html
+Le code a ete tester sur Linux et MacOS
+La repartition de travail est dans `CONTRIB.md`

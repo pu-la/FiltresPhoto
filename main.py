@@ -203,7 +203,7 @@ def color512(in_image, fact=8):
 image = Image.open("maison.jpeg")
 
 #PROGRAMME
-
+saved=False
 while True:
     print("[O]uvrir\n[E]nregistrer\n[P]review\n[Q]uitter\nFiltres: \n 1. Couleurs\n 2. Couleurs (avancee)\n 3. Gris\n 4. Noir et blanc\n 5. Mirroir\n 6. Pixelation\n 7. Luminosite\n 8. Color\n 9. Color512")
     choix = input().upper()
