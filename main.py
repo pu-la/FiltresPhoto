@@ -18,23 +18,23 @@ def filtre_float(in_image, coeff_liste):
             image.putpixel((x, y),(int(round(image.getpixel((x, y))[0]*coeff_liste[0], 0)), int(round(image.getpixel((x, y))[1]*coeff_liste[1], 0)), int(round(image.getpixel((x, y))[2]*coeff_liste[2], 0))))    # Magique.
     return image
 
-def filtre(in_image, coeff_liste):
+def rienk_filtre(in_image, coeff_liste):
     """Donne une image et des coefficients pour les couleurs sous forme de liste (Que des entires!) - ne supporte PAS les floats."""
     image = in_image # Plus facile pour travailler dessus
     for y in range(image.height):       # Balailler l'y de l'image 
         for x in range(image.width):    # Balailler le x de l'image
             image.putpixel((x, y),(image.getpixel((x, y))[0]*coeff_liste[0], image.getpixel((x, y))[1]*coeff_liste[1], image.getpixel((x, y))[2]*coeff_liste[2]))    # Magique.
     return image
-def filtre_r(in_image):
+def rienk_filtre_r(in_image):
     '''Filtre Rouge, passe une image'''
     return filtre(in_image, [1,0,0])
-def filtre_g(in_image):
+def rienk_filtre_g(in_image):
     '''Filtre Vert, passe une image'''
     return filtre(in_image, [0,1,0])
-def filtre_b(in_image):
+def rienk_filtre_b(in_image):
     '''Filtre Bleu, passe une image'''
     return filtre(in_image, [0,0,1])
-def filtre_gris(in_image):
+def rienk_filtre_gris(in_image):
     """transforme une image couleur en nuance de gris, passe une image"""
     image = in_image # Plus facile pour travailler dessus
     for y in range(image.height):       # Balailler l'y de l'image 
@@ -43,7 +43,91 @@ def filtre_gris(in_image):
             image.putpixel((x, y), (moyenne, moyenne, moyenne))    # Magique.
     return image
 
-def noiretblanc(in_img, fact=128):
+###<Tawana>
+def filtre_gris(image):
+    #identification du fonction
+    rgb_image = image.convert("RGB")
+    #convertit "maison" en 3 coueurs: red, green, blue
+    for i in range(image.width):
+    #balaye la largeur de "maison"
+        for j in range(image.height):
+    #balaye la longueur de "maison"
+            r, g, b = rgb_image.getpixel((i, j))
+    #Retourne la couleur du pixel (i, j) de image.
+            moy = (r+g+b)/3
+    #Calcul de la moyenne 
+            moyenne = int(moy)
+    #Transforme moy en un nombre entier
+            image.putpixel((i, j),(moyenne, moyenne, moyenne))
+        #r, g et b prend la valeur de moyenne
+        #Modifie la couleur du pixel (i, j) de image en (r, g, b).
+    return image
+
+def filtre_bleu_vert(image):
+    'Cet filtre est basé sur le fonctionnement du filtre rouge'
+    #Identification du fonction
+    rgb_image = image.convert("RGB")
+    #Convertit "maison" en 3 coueurs: red, green, blue
+    for i in range(image.width):
+    #Balaye la largeur de "maison"
+        for j in range(image.height):
+    #Balaye la longueur de "maison"
+            r, g, b = rgb_image.getpixel((i, j))
+    #Retourne la couleur du pixel (i, j) de image.
+            image.putpixel((i,j),(0, g, b))
+    #Modifie la couleur du pixel (i, j) de image en (r, g, b).
+    return image
+
+def noiretblanc(image):
+    'Cet filtre suit le filtre gris'
+#Identification du fonction
+    rgb_image = image.convert("L")
+#Convertit "maison" en nuance de gris
+    return rgb_image
+#Enregistre le variable sur lequel va etre exécuter le fonction.
+    for i in range(image.width):
+#Balaye la largeur de "maison"
+        for j in range(image.height):
+#Balaye la longueur de "maison"
+            r, g, b = rgb_image.getpixel((i, j))
+#Retourne la couleur du pixel (i, j) de image.
+            image.putpixel((i, j),(r, g, b))
+            if r<128:
+                r = 0
+            else:
+                r = 255
+            if g<128:
+                g = 0
+            else:
+                g = 255
+            if b<128:
+                b = 0
+            else:
+                b = 255
+#Modifie la couleur du pixel (i, j) de image en (r, g, b).
+#Si r ou g ou b est inferieur à 128, sa valeur change à 0.
+#Si r ou g ou b est supérieur ou égale à 128, sa valeur change à 255.
+    return image
+
+def filtre_rouge(image):
+#Identification du fonction
+    rgb_image = image.convert("RGB")
+#Convertit "maison" en 3 coueurs: red, green, blue
+    for i in range(image.width):
+#Balaye la largeur de "maison"
+        for j in range(image.height):
+#Balaye la longueur de "maison"
+            r, g, b = rgb_image.getpixel((i, j))
+#Retourne la couleur du pixel (i, j) de image.
+            image.putpixel((i,j),(r, 0, 0))
+#Modifie la couleur du pixel (i, j) de image en (r, g, b).
+    return image
+
+
+
+###</Tawana>
+
+def rienk_noiretblanc(in_img, fact=128):
     """Filtre Noir et blanc, attend une image et un facteur optionnel"""
     image = filtre_gris(in_img)
     for y in range(image.height):
@@ -139,13 +223,15 @@ while True:
         saved = True
         image.save(input("Nom du fichier: "))
     elif choix == "1":
-        couleur = input("[R]ouge, [V]ert ou [B]leu: ").upper()
+        couleur = input("[R]ouge, [V]ert, [B]leu ou ([VB]ert et Bleu)").upper()
         if couleur == "R":
             filtre_r(image)
         elif couleur == "V":
             filtre_v(image)
         elif couleur == "B":
             filtre_b(image)
+        elif couleur == "VB":
+            filtre_bleu_vert(image)
         else:
             print("Error")
             pass
