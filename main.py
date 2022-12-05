@@ -25,6 +25,7 @@ def filtre(in_image, coeff_liste):
         for x in range(image.width):    # Balailler le x de l'image
             image.putpixel((x, y),(image.getpixel((x, y))[0]*coeff_liste[0], image.getpixel((x, y))[1]*coeff_liste[1], image.getpixel((x, y))[2]*coeff_liste[2]))    # Magique.
     return image
+    
 def filtre_r(in_image):
     '''Filtre Rouge, passe une image'''
     return filtre(in_image, [1,0,0])
@@ -152,8 +153,8 @@ def pixelation(in_img, nb):
     for x in range(1, image.width, nb):
         for y in range(1, image.height, nb):
             pixelval=[0, 0, 0]
-            for i in range(-1, nb-1):
-                for ii in range(-1, nb-1):
+            for i in range(-1, nb-2):
+                for ii in range(-1, nb-2):
                     pixelval[0] += image.getpixel((x+ii,y+i))[0]
                     pixelval[1] += image.getpixel((x+ii,y+i))[1]
                     pixelval[2] += image.getpixel((x+ii,y+i))[2]
@@ -227,7 +228,7 @@ while True:
         if couleur == "R":
             filtre_r(image)
         elif couleur == "V":
-            filtre_v(image)
+            filtre_g(image)
         elif couleur == "B":
             filtre_b(image)
         elif couleur == "VB":
@@ -250,11 +251,11 @@ while True:
     elif choix == "8":
         couleur = input("[R]ouge, [V]ert ou [B]leu: ").upper()
         if couleur == "R":
-            color(0,int(input("Rajoute au couleur: ")))
+            color(image,0,int(input("Rajoute au couleur: ")))
         elif couleur == "V":
-            color(1,int(input("Rajoute au couleur: ")))
+            color(image,1,int(input("Rajoute au couleur: ")))
         elif couleur == "B":
-            color(2,int(input("Rajoute au couleur: ")))
+            color(image,2,int(input("Rajoute au couleur: ")))
         else:
             print("Error")
             pass
