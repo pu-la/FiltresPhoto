@@ -20,6 +20,3 @@ Filtres:
   ```
   3. Les modifications de l'image(filtres) peuvent etre utilise avec les numeros entre 1 et 9
   4. Les autres fonctions importantes sont indique entre les parentheses - pour ouvrir un fichier, utiliser [O]
-
-Le code a ete tester sur Linux et MacOS
-La repartition de travail est dans `CONTRIB.md`
