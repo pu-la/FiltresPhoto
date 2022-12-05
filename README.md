@@ -23,16 +23,7 @@ Tawana:
 	- [x] Commentaires
 	- [x] Propre
 	- [x] Optimise
-- Filtre Vert
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
-- Filtre Bleu
-	- [x] Code
-	- [x] Commentaires
-	- [x] Propre
-	- [x] Optimise
+
 Ubu:
 - Mirroir
 	- [x] Code
@@ -74,6 +65,16 @@ Rienk:
 	- [x] Propre
 	- [x] Optimise
 - Pixel10
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
+- Filtre Vert
+	- [x] Code
+	- [x] Commentaires
+	- [x] Propre
+	- [x] Optimise
+- Filtre Bleu
 	- [x] Code
 	- [x] Commentaires
 	- [x] Propre
