@@ -45,24 +45,6 @@ def rienk_filtre_gris(in_image):
     return image
 
 ###<Tawana>
-def filtre_gris(image):
-    #identification du fonction
-    rgb_image = image.convert("RGB")
-    #convertit "maison" en 3 coueurs: red, green, blue
-    for i in range(image.width):
-    #balaye la largeur de "maison"
-        for j in range(image.height):
-    #balaye la longueur de "maison"
-            r, g, b = rgb_image.getpixel((i, j))
-    #Retourne la couleur du pixel (i, j) de image.
-            moy = (r+g+b)/3
-    #Calcul de la moyenne 
-            moyenne = int(moy)
-    #Transforme moy en un nombre entier
-            image.putpixel((i, j),(moyenne, moyenne, moyenne))
-        #r, g et b prend la valeur de moyenne
-        #Modifie la couleur du pixel (i, j) de image en (r, g, b).
-    return image
 
 def filtre_bleu_vert(image):
     'Cet filtre est basé sur le fonctionnement du filtre rouge'
@@ -79,35 +61,44 @@ def filtre_bleu_vert(image):
     #Modifie la couleur du pixel (i, j) de image en (r, g, b).
     return image
 
-def noiretblanc(image):
-    'Cet filtre suit le filtre gris'
+def filtre_gris(image):
+#identification du fonction
+    rgb_image = image.convert("RGB")
+#convertit "maison" en 3 coueurs: red, green, blue
+    for i in range(image.width):
+#balaye la largeur de "maison"
+        for j in range(image.height):
+#balaye la longueur de "maison"
+            r, g, b = rgb_image.getpixel((i, j))
+#Retourne la couleur du pixel (i, j) de image.
+            moy = (r+g+b)/3
+#Calcul de la moyenne 
+            moyenne = int(moy)
+#Transforme moy en un nombre entier
+            image.putpixel((i, j),(moyenne, moyenne, moyenne))
+#r, g et b prend la valeur de moyenne
+#Modifie la couleur du pixel (i, j) de image en (r, g, b).
+    return image
+
+
+def filtre_noir_blanc(image):
+    'Ce filtre suit le filtre gris'
 #Identification du fonction
-    rgb_image = image.convert("L")
+    facteur = 128
+    rgb_image = filtre_gris(image)
 #Convertit "maison" en nuance de gris
-    return rgb_image
 #Enregistre le variable sur lequel va etre exécuter le fonction.
     for i in range(image.width):
 #Balaye la largeur de "maison"
         for j in range(image.height):
 #Balaye la longueur de "maison"
-            r, g, b = rgb_image.getpixel((i, j))
+            r = rgb_image.getpixel((i, j))[0]
 #Retourne la couleur du pixel (i, j) de image.
-            image.putpixel((i, j),(r, g, b))
-            if r<128:
-                r = 0
+#Nous avons seulement besoin d'un couleur car la façon dont le filtre de nuance de gris fonctionne, fait que tous les couleurs vaut le mem̂e.
+            if r<facteur:
+                image.putpixel((i, j),(0, 0, 0))
             else:
-                r = 255
-            if g<128:
-                g = 0
-            else:
-                g = 255
-            if b<128:
-                b = 0
-            else:
-                b = 255
-#Modifie la couleur du pixel (i, j) de image en (r, g, b).
-#Si r ou g ou b est inferieur à 128, sa valeur change à 0.
-#Si r ou g ou b est supérieur ou égale à 128, sa valeur change à 255.
+                image.putpixel((i, j),(255, 255, 255))
     return image
 
 def filtre_rouge(image):
@@ -153,8 +144,8 @@ def pixelation(in_img, nb):
     for x in range(1, image.width, nb):
         for y in range(1, image.height, nb):
             pixelval=[0, 0, 0]
-            for i in range(-1, nb-2):
-                for ii in range(-1, nb-2):
+            for i in range(-1, nb-1):
+                for ii in range(-1, nb-1):
                     pixelval[0] += image.getpixel((x+ii,y+i))[0]
                     pixelval[1] += image.getpixel((x+ii,y+i))[1]
                     pixelval[2] += image.getpixel((x+ii,y+i))[2]
@@ -237,15 +228,21 @@ while True:
             print("Error")
             pass
     elif choix == "2":
-        filtre_float(image, [int(input("Combien de Rouge(multiplication): ")), int(input("Combien de Vert: ")), int(input("Combien de Bleu: "))])
+        filtre_float(image, [float(input("Combien de Rouge(multiplication): ")), float(input("Combien de Vert: ")), float(input("Combien de Bleu: "))])
     elif choix == "3":
         filtre_gris(image)
     elif choix == "4":
-        noiretblanc(image, int(input("Facteur (0 a 255, par defaut 128): ")))
+        try:
+            rienk_noiretblanc(image, int(input("Facteur (0 a 255, par defaut 128): ")))
+        except ValueError:
+            rienk_noiretblanc(image, 128)
     elif choix == "5":
         mirroir(image)
     elif choix == "6":
-        pixelation(image, int(input("taille des pixels: ")))
+        try:
+            pixelation(image, int(input("taille des pixels: ")))
+        except IndexError:
+            print(f"Choisir une autre valeur, votre taille de pixel n'est pas compatible avec cette image.")
     elif choix == "7":
         lum(image, int(input("Lumiere ajoute: ")))
     elif choix == "8":
