@@ -81,7 +81,7 @@ def filtre_gris(image):
     return image
 
 
-def filtre_noir_blanc(image):
+def temp_filtre_noir_blanc(image):
     'Ce filtre suit le filtre gris'
 #Identification du fonction
     facteur = 128
@@ -92,7 +92,7 @@ def filtre_noir_blanc(image):
 #Balaye la largeur de "maison"
         for j in range(image.height):
 #Balaye la longueur de "maison"
-            r = rgb_image.getpixel((i, j))[0]
+            r = rgb_image.getpixel((i, j))[0] # Couleur rouge - indice 0
 #Retourne la couleur du pixel (i, j) de image.
 #Nous avons seulement besoin d'un couleur car la façon dont le filtre de nuance de gris fonctionne, fait que tous les couleurs vaut le mem̂e.
             if r<facteur:
